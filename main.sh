@@ -12,5 +12,6 @@ else
   read -p ''
   git -C ./RECOVERY-DRIVE clone https://github.com/BV0073194/FOREVER-MMD6 --quiet
   clear
+  mv RECOVERY-DRIVE/FOREVER-MMD6/* ~/$root_folder
   bash main.sh
 fi
