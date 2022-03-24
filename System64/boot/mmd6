@@ -1,0 +1,50 @@
+clear
+read -p 'mmd6> ' entry
+
+
+## to run the asm compiler
+if [[ "$entry" == "asm-build" && "$entry" != *"#"* ]]; then
+  bash ./System64/cmds/asm-build.sh
+fi
+
+if [[ "$entry" == "asm-run" && "$entry" != *"#"* ]]; then
+  bash ./System64/cmds/asm-run.sh
+fi
+
+if [[ "$entry" == "asm-purge" && "$entry" != *"#"* ]]; then
+  bash ./System64/cmds/asm-purge.sh
+fi
+
+if [[ "$entry" == "python" && "$entry" != *"#"* ]]; then
+  bash ./System64/Applications/python3.9/python.sh
+fi
+
+## user can get help this way
+
+ #&& "$entry" != *"#"* ]]; then
+if [[ "$entry" == "hlp" || "$entry" == "help" ]]; then
+  echo $'Type anything for normal commands,\ntype "#" and then anything to access linux commands;'
+  read -p $'\nHit enter to return to shell ><\n'
+fi
+
+## user can get the distro's info
+if [[ "$entry" == "sysinf" && "$entry" != *"#"* ]]; then
+  bash ./System64/cmds/sysinf.sh
+fi
+
+## firefox
+#if [[ "$entry" == "ffx" && "$entry" != *"#"* ]]; then
+  #firefox ; read -p $'\nHit enter to return to shell ><\n' ; bash main.sh
+#fi
+
+## user can use basic linux commands
+if [[ "$entry" == *""* ]]; then
+  declare -a files=("hlp")
+  if [[ "$entry" != *"${files[@]}"* ]]; then
+    SUBSTR=$(echo $entry | cut -d'#' -f 2)
+    $SUBSTR
+    read -p $'\nHit enter to return to shell ><\n'
+  fi
+fi
+
+bash main.sh
