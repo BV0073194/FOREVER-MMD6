@@ -1,0 +1,7 @@
+audio = true
+microphone = true
+video = true
+run = "bash main.sh"
+
+[nix]
+channel = "stable-21_11"
