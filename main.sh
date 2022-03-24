@@ -1,7 +1,6 @@
 export NIXPKGS_ALLOW_UNFREE=1
 nix-env -iA nixpkgs.wineWowPackages.stable
 rm -rf RECOVERY-DRIVE
-read -p ''
 clear
 root_folder="FOREVER-MMD6"
 #-d ~/$root_folder/System64/boot ] 
