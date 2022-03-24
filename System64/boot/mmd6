@@ -47,4 +47,4 @@ if [[ "$entry" == *""* ]]; then
   fi
 fi
 
-bash main.sh
+bash System64/boot/mmd6
