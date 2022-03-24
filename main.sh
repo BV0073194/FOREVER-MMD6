@@ -1,3 +1,4 @@
+rm -rf RECOVERY-DRIVE/FOREVER-MMD6
 clear
 root_folder="FOREVER-MMD6"
 #-d ~/$root_folder/System64/boot ] 
@@ -13,6 +14,6 @@ else
   git -C ./RECOVERY-DRIVE clone https://github.com/BV0073194/FOREVER-MMD6 --quiet
   clear
   mv RECOVERY-DRIVE/FOREVER-MMD6/* ~/$root_folder
-  rm -d RECOVERY-DRIVE/FOREVER-MMD6
+  rm -rf RECOVERY-DRIVE/FOREVER-MMD6
   bash main.sh
 fi
