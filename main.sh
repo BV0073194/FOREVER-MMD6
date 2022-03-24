@@ -1,5 +1,4 @@
-mkdir -p RECOVERY-DRIVE
-rm -rf RECOVERY-DRIVE/FOREVER-MMD6
+rm -rf RECOVERY-DRIVE
 clear
 root_folder="FOREVER-MMD6"
 #-d ~/$root_folder/System64/boot ] 
@@ -10,6 +9,7 @@ then
   rm -rf RECOVERY-DRIVE
   bash System64/boot/mmd6-boot-disk 
 else
+  mkdir -p RECOVERY-DRIVE
   echo -ne 'Hit {Enter} to enter MMD6-LINUX recovery mode\n'
   read -p ''
   git -C ./RECOVERY-DRIVE clone https://github.com/BV0073194/FOREVER-MMD6 --quiet
