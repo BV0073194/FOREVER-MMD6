@@ -1,3 +1,4 @@
+mkdir -p RECOVERY-DRIVE
 rm -rf RECOVERY-DRIVE/FOREVER-MMD6
 clear
 root_folder="FOREVER-MMD6"
